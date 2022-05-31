@@ -13,7 +13,8 @@ states = data.state.to_list()
 num_states_correct = 0
 
 while (num_states_correct < 50):
-    answer_state = screen.textinput(title=f"{num_states_correct}/50 States Correct", prompt="What's another state's name?")
+    answer_state = screen.textinput(title=f"{num_states_correct}/50 States Correct",
+                                    prompt="What's another state's name?").title()
 
     if answer_state in states:
         num_states_correct += 1
